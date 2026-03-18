@@ -1,0 +1,202 @@
+/* Custom Styles & Animations */
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Contact Button Styles */
+.contact-btn {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(56, 189, 248, 0.2);
+    padding: 12px 30px;
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.contact-btn:hover {
+    background: #38bdf8;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px -10px rgba(56, 189, 248, 0.5);
+    border-color: #38bdf8;
+}
+
+/* Custom cursor for project previews */
+.cursor-zoom-in {
+    cursor: zoom-in;
+}
+
+/* Style the Fancybox pop-up background to match your site */
+.f-backdrop {
+    background: rgba(2, 6, 23, 0.95) !important;
+}
+
+.fancybox__content {
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+/* Container for the Video to keep it 16:9 ratio */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* The Card Style */
+.project-card-v2 {
+    background: #0f172a;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 1rem;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.project-card-v2:hover {
+    transform: translateY(-10px);
+    border-color: #38bdf8;
+    box-shadow: 0 10px 30px -10px rgba(56, 189, 248, 0.3);
+}
+
+/* Tech Tags */
+.tag {
+    font-size: 0.7rem;
+    font-weight: bold;
+    padding: 2px 8px;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+.sky { background: rgba(56, 189, 248, 0.1); color: #38bdf8; }
+.orange { background: rgba(251, 146, 60, 0.1); color: #fb923c; }
+.emerald { background: rgba(16, 185, 129, 0.1); color: #10b981; }
+.purple { background: rgba(168, 85, 247, 0.1); color: #a855f7; }
+.yellow { background: rgba(250, 204, 21, 0.1); color: #facc15; }
+.pink { background: rgba(244, 63, 94, 0.1); color: #f43f5e; }
+
+/* YouTube Link Style */
+.yt-link {
+    display: inline-block;
+    margin-top: 1.5rem;
+    color: #f43f5e;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+}
+.yt-link:hover {
+    color: #fb7185;
+    text-decoration: underline;
+}
+
+/* This targets the area behind your name */
+#hero {
+    position: relative;
+    overflow: hidden; /* Keeps the glow effects inside */
+    
+    /* OPTION A: Deep Slate Background (Clean) */
+    /* background-color: #020617;  */
+
+    /* OPTION B: Image Background (Uncomment the lines below to use) */
+    background-image: linear-gradient(rgba(2, 6, 23, 0.7), rgba(2, 6, 23, 0.7)), url('https://itchronicles.com/wp-content/uploads/2021/04/Optimized-Illustration-from-Adobe-Stock-for-ITC-Post-on-AI-in-Game-Development-1024x576.jpeg');
+    background-size: cover;
+    /* background-position: center; */
+}
+
+/* Ensure the glows we made earlier are visible */
+.glow-1, .glow-2 {
+    z-index: 0; /* Puts them behind the text */
+}
+
+#main-name {
+    z-index: 10; /* Keeps your name on top of the background */
+    position: relative;
+}
+
+/* Custom Background Glows */
+.glow-1 {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 300px;
+    height: 300px;
+    background: #38bdf8;
+    filter: blur(120px);
+    opacity: 0.2;
+    z-index: -1;
+}
+
+.glow-2 {
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+    width: 300px;
+    height: 300px;
+    background: #10b981;
+    filter: blur(120px);
+    opacity: 0.2;
+    z-index: -1;
+}
+
+/* Custom Project Card Styling */
+.project-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 1rem;
+    transition: all 0.3s ease;
+}
+
+.project-card:hover {
+    border-color: #38bdf8;
+    transform: translateY(-5px);
+}
+
+/* Animated Scroll Mouse */
+.scroll-indicator {
+    position: absolute;
+    bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    color: #64748b;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.mouse {
+    width: 20px;
+    height: 35px;
+    border: 2px solid #334155;
+    border-radius: 20px;
+    position: relative;
+}
+
+.mouse::before {
+    content: '';
+    width: 4px;
+    height: 8px;
+    background: #38bdf8;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 6px;
+    border-radius: 2px;
+    animation: scroll 1.5s infinite;
+}
+
+@keyframes scroll {
+    0% { opacity: 1; transform: translateX(-50%) translateY(0); }
+    100% { opacity: 0; transform: translateX(-50%) translateY(15px); }
+}
